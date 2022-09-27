@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCS</title>
+    <!-- fontstyle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="RCS-wrap">
+      <a
+        style="position: absolute; top: 10px; left: 10px"
+        class="modal-wrap__btn--yes"
+        href="#open-modal"
+        >모달 예시</a
+      >
+
+      <div id="open-modal" class="modal-window template-list">
+        <div class="template-list__inner">
+          <a href="#" title="Close" class="modal-close"
+            ><i class="ico_close"></i
+          ></a>
+          <h2>RCS 템플릿 목록</h2>
+          <div class="template-list__table-wrap">
+            <div class="template-list__table-top">
+              <div class="template-list__total-count">
+                총 <span>100개</span>
+              </div>
+              <div class="select-default">
+                <select>
+                  <option selected>정렬기준</option>
+                  <option value="">정렬기준1</option>
+                  <option value="">정렬기준2</option>
+                </select>
+              </div>
+              <div class="select-default">
+                <select>
+                  <option selected>유형</option>
+                  <option value="">유형1</option>
+                  <option value="">유형2</option>
+                </select>
+              </div>
+              <div class="select-default">
+                <select>
+                  <option selected>속성</option>
+                  <option value="">속성1</option>
+                  <option value="">속성2</option>
+                </select>
+              </div>
+              <div class="select-default">
+                <select>
+                  <option selected>상태</option>
+                  <option value="">상태1</option>
+                  <option value="">상태2</option>
+                </select>
+              </div>
+              <div class="template-list__search">
+                <input
+                  type="text"
+                  class="template-list__search-input"
+                  placeholder="제목 검색"
+                />
+                <button class="template-list__search-btn"></button>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="table__style01">
+                <thead>
+                  <tr>
+                    <th>NO</th>
+                    <th>유형</th>
+                    <th>속성</th>
+                    <th>템플릿명</th>
+                    <th>템플릿 ID</th>
+                    <th>등록일</th>
+                    <th>승인일</th>
+                    <th>상태</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>-</td>
+                    <td>
+                      <span class="state-reject">반려</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>212</td>
+                    <td>Description</td>
+                    <td>회원가입</td>
+                    <td>
+                      <span class="fs-10">아디다스 윈터 캠페인_20211225</span>
+                    </td>
+                    <td>a0r9D000000</td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="fs-10">2021-12-26</span>
+                      <span class="fs-11">14:24:50</span>
+                    </td>
+                    <td>
+                      <span class="state-approve">승인</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="table-pagination">
+            <ul>
+              <!--📌 DEV Check(11) : arrow 비활성화 class="table-pagination__arrow--disable" 추가 -->
+              <li
+                class="table-pagination__first table-pagination__arrow--disable"
+              >
+                <a href="javascript:;"></a>
+              </li>
+              <li
+                class="table-pagination__prev table-pagination__arrow--disable"
+              >
+                <a href="javascript:;"></a>
+              </li>
+              <!--📌 DEV Check(7) : pagination active 됐을 때, li class="table-pagination--active" 추가 -->
+              <li class="table-pagination--active">
+                <a href="javascript:;">01</a>
+              </li>
+              <li>
+                <a href="javascript:;">02</a>
+              </li>
+              <li>
+                <a href="javascript:;">03</a>
+              </li>
+              <li>
+                <a href="javascript:;">04</a>
+              </li>
+              <li>
+                <a href="javascript:;">05</a>
+              </li>
+              <!--📌 DEV Check(10) : arrow active시 class="table-pagination--arrow-active" 추가 -->
+              <li class="table-pagination__next table-pagination--arrow-active">
+                <a href="javascript:;"></a>
+              </li>
+              <li class="table-pagination__last table-pagination--arrow-active">
+                <a href="javascript:;"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <h1 class="RCS-wrap_tit">RCS</h1>
+        <ul class="top-menu">
+          <li class="animated-button--active">
+            <a href="javascript:;"
+              ><i class="ico_sms"></i><span>SMS/LMS</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_temp"></i><span>템플릿</span></a
+            >
+          </li>
+        </ul>
+        <ul class="bottom-menu">
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_lookup"></i><span>예약조회</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_result"></i><span>발송결과</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="cont_wrap"></section>
+    </div>
+  </body>
+</html>

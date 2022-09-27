@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCS</title>
+    <!-- fontstyle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="RCS-wrap">
+
+	  <a style="position: absolute; top:10px; left:10px" class="modal-wrap__btn--yes" href="#open-modal">모달 예시</a>
+
+      <div id="open-modal" class="modal-window message-save-list">
+        <div class="message-save-list__inner">
+		  <a href="#" title="Close" class="modal-close"
+            ><i class="ico_close"></i
+          ></a>
+		  <h2>RCS 메시지 저장 목록</h2>
+		  <div class="message-save-list__table-wrap">
+			<div class="message-save-list__table-top">
+			  <div class="message-save-list__total-count">
+				총 <span>0개</span>
+			  </div>
+			  <div class="message-save-list__search">
+				<input type="text" class="message-save-list__search-input" placeholder="제목 검색" disabled>
+				<button class="message-save-list__search-btn"></button>
+			  </div>
+			</div>
+			<div class="table-wrap">
+			  <!--📌 DEV Check(19) : 저장된 메시지가 없을 경우 class="save-history__none" 추가 -->
+			  <table class="table__style01 save-history__none">
+			    <thead>
+				  <tr>
+					<th>
+					  <label class="control control--checkbox">
+						<input type="checkbox" disabled>
+						<div class="control__indicator"></div>
+					  </label>
+					</th>
+					<th>NO</th>
+					<th>유형</th>
+					<th>제목</th>
+					<th>내용</th>
+					<th>등록일</th>
+				  </tr>
+			    </thead>
+				<tbody>
+				  <tr>
+					<td colspan="6">
+					  <div class="save-history__none__txt">
+						<span>저장된 메시지가 없습니다.</span>
+					  </div>
+					  <button class="table-bot__btn--ok">등록</button>
+					  <img
+					    src="./img/IC_noMsg.png"
+						class="save-history__none__icon"
+						alt="저장된 메시지가 없습니다."
+					  />
+					</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+		  
+		  <!--📌 DEV Check(11) : table 내역이 없을 경우 div class="table-pagination--disable" 추가 -->
+          <div class="table-pagination table-pagination--disable">
+            <ul>
+              <li class="table-pagination__first">
+                <a href="javascript:;"></a>
+              </li>
+              <li class="table-pagination__prev">
+                <a href="javascript:;"></a>
+              </li>
+              <li>
+                <a href="javascript:;">01</a>
+              </li>
+              <li>
+                <a href="javascript:;">02</a>
+              </li>
+              <li>
+                <a href="javascript:;">03</a>
+              </li>
+              <li>
+                <a href="javascript:;">04</a>
+              </li>
+              <li>
+                <a href="javascript:;">05</a>
+              </li>
+              <li class="table-pagination__next">
+                <a href="javascript:;"></a>
+              </li>
+              <li class="table-pagination__last">
+                <a href="javascript:;"></a>
+              </li>
+            </ul>
+          </div>
+		</div>
+      </div>
+
+      <nav>
+        <h1 class="RCS-wrap_tit">RCS</h1>
+        <ul class="top-menu">
+          <li class="animated-button--active">
+            <a href="javascript:;"
+              ><i class="ico_sms"></i><span>SMS/LMS</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_temp"></i><span>템플릿</span></a
+            >
+          </li>
+        </ul>
+        <ul class="bottom-menu">
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_lookup"></i><span>예약조회</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_result"></i><span>발송결과</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="cont_wrap">
+       
+      </section>
+	  
+    </div>
+  </body>
+</html>

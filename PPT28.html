@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RCS</title>
+  <!-- fontstyle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="RCS-wrap">
+    <nav>
+      <h1 class="RCS-wrap_tit">RCS</h1>
+      <ul class="top-menu">
+        <li class="animated-button--active">
+          <a href="javascript:;"><i class="ico_sms"></i><span>SMS/LMS</span></a>
+        </li>
+        <li class="animated-button">
+          <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+        </li>
+        <li class="animated-button">
+          <a href="javascript:;"><i class="ico_temp"></i><span>템플릿</span></a>
+        </li>
+      </ul>
+      <ul class="bottom-menu">
+        <li class="animated-button">
+          <a href="javascript:;"><i class="ico_lookup"></i><span>예약조회</span></a>
+        </li>
+        <li class="animated-button">
+          <a href="javascript:;"><i class="ico_result"></i><span>발송결과</span></a>
+        </li>
+      </ul>
+    </nav>
+    <section class="cont_wrap">
+      <article class="scroll-custom">
+        <h2>템플릿</h2>
+        <div class="label-wrap clearFix">
+          <div class="label-select">
+            <label>브랜드</label>
+            <select class="label" name="">
+              <option value="">선택</option>
+              <option value="">option01</option>
+              <option value="">option02</option>
+            </select>
+          </div>
+          <div class="label-select mr0">
+            <label>발신번호</label>
+            <select class="label" name="">
+              <option value="">02-5421-1333</option>
+              <option value="">option01</option>
+              <option value="">option02</option>
+            </select>
+          </div>
+        </div>
+        <div class="template-select">
+          <h3>템플릿 선택</h3>
+          <div class="template-select__tab clearFix">
+            <ul>
+              <li rel="template-tab1">
+                <label class="control">
+                  <input type="radio" name="template-select" />Free 템플릿
+                  <div class="control__indicator"></div>
+                </label>
+              </li>
+              <li rel="template-tab2">
+                <label class="control control--active">
+                  <input type="radio" name="template-select"/>템플릿 불러오기
+                  <div class="control__indicator"></div>
+                </label>
+              </li>
+            </ul>
+            <div class="template-select__tab-cont-wrap">
+              <div id="template-tab1" class="template__tab-cont template-select__tab1">
+                <div class="message-setting">
+                  <h3>메세지 내용</h3>
+                  <div class="message-setting__inner">
+                    <div class="message-setting__textarea">
+                      <textarea placeholder="메세지를 입력해주세요."></textarea>
+                      <div class="message-setting__textarea-txt">
+                        <span class="message-setting__textarea-txt--bk">
+                          <span class="message-setting__textarea-txt--bk--bold">0</span>/90자
+                        </span>
+                      </div>
+                    </div>
+                    <div class="message-setting__button clearFix">
+                      <div class="message-setting__left">
+                        <button class="btn reset">내용 초기화</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="customer-setting">
+                  <h6 class="customer-setting__tit">고객 설정</h6>
+                  <ul class="customer-setting__button-list clearFix">
+                    <li>
+                      <!--📌 DEV Check(1) : button 선택 시 class=".customer-setting__button--active" 추가 -->
+                      <button
+                        class="customer-setting__button customer-setting__button--active"
+                      >
+                        #{통합고객번호}<i></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="customer-setting__button">
+                        #{세그먼트사용법일련번호}<i></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="customer-setting__button">#{사번}<i></i></button>
+                    </li>
+                    <li>
+                      <button class="customer-setting__button">
+                        #{고객휴대폰}<i></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="customer-setting__button">
+                        #{고객이메일}<i></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="customer-setting__button">
+                        #{고객명}<i></i>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="template-tab2" class="template__tab-cont preview-wrap__tab2">
+                <div class="message-setting">
+                  <h3>메세지 내용</h3>
+                  <div class="message-setting__inner">
+                    <input type="text" placeholder="$템플릿명$" disabled />
+                    <div class="message-setting__textarea">
+                      <textarea placeholder="$메세지 내용$" disabled></textarea>
+                      <div class="message-setting__textarea-txt">
+                        <span class="message-setting__textarea-txt--bk">
+                          <span class="message-setting__textarea-txt--bk--bold">0</span>/90자
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button-setting">
+                    <h3>버튼 설정</h3>
+                    <div class="button-setting__info">
+                      버튼에 입력한 변수를 변경할 수 있습니다.
+                    </div>
+                    <button class="btn plus">버튼 조회</button>
+                  </div>
+                  <div class="customer-setting02">
+                    <h3>고객 설정</h3>
+                    <div class="customer-setting02__info">
+                      템플릿에 등록되어 있는 변수를 변경할 수 있습니다.
+                    </div>
+                    <div class="customer-setting02__label-wrap">
+                      <div class="label-select">
+                        <label>고객명</label>
+                        <select class="label" name="">
+                          <option value="">선택</option>
+                          <option value="">option01</option>
+                          <option value="">option02</option>
+                        </select>
+                      </div>
+                      <div class="label-input">
+                        <label>이름</label>
+                        <input type="text" value="홍길동" />
+                      </div>
+                      <div class="label-select">
+                        <label>ID</label>
+                        <select class="label" name="">
+                          <option value="">선택</option>
+                          <option value="">option01</option>
+                          <option value="">option02</option>
+                        </select>
+                      </div>
+                      <div class="label-input">
+                        <label>배송</label>
+                        <input type="text" value="선택" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="replace-send">
+          <h3>대체 발송</h3>
+          <div class="replace-send__inner clearFix">
+            <!--📌 DEV Check(2) : button 선택 시 class="replace-send__button--active" 추가 -->
+            <div class="replace-send__group clearFix">
+              <!--📌 DEV Check(4) : checkbox checked 됐을 때 label class="replace-send__control--active" 추가 -->
+              <label class="replace-send__control">발송안함
+                <input type="checkbox" />
+                <div class="replace-send__control__indicator"></div>
+              </label>
+              <label class="replace-send__control replace-send__control--active">발송함
+                <input type="checkbox" checked />
+                <div class="replace-send__control__indicator"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="send-date mt35 clearFix">
+          <h3>발송일시</h3>
+          <div class="send-date__toggle">
+            <!--📌 DEV Check(5) : input[type="checkbox"]가 disabled일 경우 class="disabled" 추가 -->
+            <div class="send-date__toggle-wrap">
+              <input type="checkbox" class="send-date__toggle-checkbox" checked />
+              <div class="send-date__toggle-circle">
+                <span>즉시</span>
+              </div>
+              <div class="send-date__toggle-bar"></div>
+            </div>
+          </div>
+          <div class="send-date__input">
+            <div class="send-date__date">
+              <input type="date" />
+            </div>
+            <div class="send-date__number">
+              <div class="send-date__number__inner send-date__number__inner--hour">
+                <input type="number" step="1" value="1" />
+                <div class="send-date__number__btn-wrap">
+                  <div class="send-date__number__btn send-date__number__btn--up"></div>
+                  <div class="send-date__number__btn send-date__number__btn--down"></div>
+                </div>
+              </div>
+            </div>
+            <div class="send-date__number">
+              <div class="send-date__number__inner send-date__number__inner--minute">
+                <input type="number" step="1" value="1" />
+                <div class="send-date__number__btn-wrap">
+                  <div class="send-date__number__btn send-date__number__btn--up"></div>
+                  <div class="send-date__number__btn send-date__number__btn--down"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <aside>
+        <div class="tab clearFix">
+          <ul>
+            <!--📌 DEV Check(3) : 해당 탭화면 보여질 때 class="tab-active" 추가 -->
+            <li class="tab-active" rel="tab1">
+              <a href="javascript:;">미리보기</a>
+            </li>
+            <li rel="tab2">
+              <a href="javascript:;">대체발송</a>
+            </li>
+          </ul>
+          <div class="tab-cont-wrap">
+            <div id="tab1" class="tab-cont preview-wrap">
+              <div class="preview-inner mockup-scroll">
+                <div class="preview-message preview-message--BG-wh">
+                  <div class="preview-message__inner-text">
+                    <div class="preview-message__inner-tit">예약</div>
+                    <div class="preview-message__inner-cont">
+                      설치예약 안내<br />
+                      <ul class="preview-message__list01">
+                        <li>
+                          <span class="preview-message__list01__tit">상품명</span>
+                          <span class="preview-message__list01__con">김치냉장고k338S11</span>
+                        </li>
+                        <li>
+                          <span class="preview-message__list01__tit">결제금액</span>
+                          <span class="preview-message__list01__con">1,500,600원</span>
+                        </li>
+                        <li>
+                          <span class="preview-message__list01__tit">설치예약일</span>
+                          <span class="preview-message__list01__con">2019-11-12</span>
+                        </li>
+                        <li>
+                          <span class="preview-message__list01__tit">주소</span>
+                          <span class="preview-message__list01__con">서울 성동구 금호로 100</span>
+                        </li>
+                        <li>
+                          <span class="preview-message__list01__tit">설치시간</span>
+                          <span class="preview-message__list01__con">배송일 아침 기사정보와 함께 안내가
+                            발송됩니다.</span>
+                        </li>
+                      </ul>
+                      <div class="TC">해당일에 설치하시겠습니까?</div>
+                    </div>
+                  </div>
+                  <div class="preview-message__button">
+                    <button>설치예약변경</button>
+                    <button>예약확정</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab2" class="tab-cont preview-wrap replace-wrap">
+              <div class="preview-inner mockup-scroll">
+                <div class="preview-message">
+                  <div class="preview-message__inner-text">
+                    <div class="preview-message__inner-cont">
+                      L.CLUB 첫구매이벤트<br /><br />
+                      5만원 이상 첫 구매 후 응모시<br />
+                      L.POINT 3천P 지급합니다.
+                    </div>
+                  </div>
+                  <div class="preview-message__button">
+                    <button>응모하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </div>
+</body>
+
+</html>

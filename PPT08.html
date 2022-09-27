@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCS</title>
+    <!-- fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link
+    rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin> <link
+    href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap”
+    rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link
+    rel=“icon” href=“./img/favicon.ico” type=“image/x-icon”>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="RCS-wrap">
+      <!--📌 DEV Check(2-1) loading-->
+      <div class="loading">
+        <h2>Loading</h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <h1>RCS</h1>
+        <ul class="top-menu">
+          <li class="animated-button--active">
+            <a href="javascript:;"
+              ><i class="ico_sms"></i><span>SMS/LMS</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_temp"></i><span>템플릿</span></a
+            >
+          </li>
+        </ul>
+        <ul class="bottom-menu">
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_lookup"></i><span>예약조회</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_result"></i><span>발송결과</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="cont-wrap">
+        <article class="scroll-custom">
+          <h2>SMS / LMS</h2>
+          <div style="width: 280px">
+            <select name="groups[locale]">
+              <option value="America/Eirunepe">
+                Acre Standard Time (America/Eirunepe
+              </option>
+              <option value="America/Rio_Branco">
+                Acre Standard Time (America/Rio_Branco)
+              </option>
+              <option value="Asia/Kabul">Afghanistan Time (Asia/Kabul)</option>
+            </select>
+          </div>
+          <div class="label-select" style="width: 200px">
+            <label>발신번호</label>
+            <select class="label" name="">
+              <option value="">Acre Standard Time (America/Eirunepe</option>
+              <option value="">Acre Standard Time (America/Rio_Branco)</option>
+              <option value="">Afghanistan Time (Asia/Kabul)</option>
+            </select>
+          </div>
+          <h3>메세지 설정</h3>
+          <div class="o-section">
+            <!-- Custom toggle checkboxes -->
+            <h4>Alternative custom toggle checkbox</h4>
+            <p class="c-toggle">
+              <input
+                class="o-hide-accessible c-toggle__checkbox-hidden"
+                type="checkbox"
+                id="toggle2"
+              />
+              <label
+                class="c-label c-label--option c-toggle__label"
+                for="toggle2"
+              >
+                <span class="c-toggle__input c-toggle__input--alternative">
+                </span>
+                Toggle setting 2
+              </label>
+            </p>
+          </div>
+        </article>
+        <aside>
+          미리보기 영역
+          <div class="preview_wrap"></div>
+        </aside>
+      </section>
+    </div>
+  </body>
+</html>

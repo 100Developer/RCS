@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RCS</title>
+  <!-- fontstyle -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="RCS-wrap">
+    <a style="position: absolute; top: 10px; left: 10px" class="modal-wrap__btn--yes" href="#open-modal">모달 예시</a>
+
+    <div id="open-modal" class="modal-window modal-center">
+      <div class="modal-center__inner">
+        <a href="#" title="Close" class="modal-close"><i class="ico_close"></i></a>
+        <h2>RCS 이미지 목록</h2>
+        <div class="modal-center__cont-wrap scroll-custom">
+          <div class="image-list__search-wrap">
+            <div class="select-default">
+              <select>
+                <option selected="">유형</option>
+                <option value="">정렬기준1</option>
+                <option value="">정렬기준2</option>
+              </select>
+            </div>
+            <div class="image-list__search">
+              <input type="text" class="image-list__search-input" placeholder="제목 검색">
+              <button class="image-list__search-btn"></button>
+            </div>
+          </div>
+          <div class="image-list__inner">
+            <ul>
+              <li>
+                <a href="javascript:;">
+                  <div class="image-list__img">
+                    <img src="./img/image_sample01.jpg" alt="연말등 날리기 이미지">
+                    <div class="image-list__img__mask"><span>추가</span></div>
+                  </div>
+                  <div class="image-list__text">
+                    <h3 class="image-list__title">연말등 날리기 이미지</h3>
+                    <div class="image-list__type">Standard Media Top</div>
+                    <div class="image-list__size">565*528</div>
+                    <div class="image-list__date">2021.12.20</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <div class="image-list__img">
+                    <img src="./img/image_sample02.jpg" alt="크리스마스 축하">
+                    <div class="image-list__img__mask"><span>추가</span></div>
+                  </div>
+                  <div class="image-list__text">
+                    <h3 class="image-list__title">크리스마스 축하</h3>
+                    <div class="image-list__type">Standard Horizontal</div>
+                    <div class="image-list__size">565*336</div>
+                    <div class="image-list__date">2021.12.15</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <div class="image-list__img">
+                    <img src="./img/image_sample03.jpg" alt="크리스마스 트리">
+                    <div class="image-list__img__mask"><span>추가</span></div>
+                  </div>
+                  <div class="image-list__text">
+                    <h3 class="image-list__title">크리스마스 트리</h3>
+                    <div class="image-list__type">Carousel Medium</div>
+                    <div class="image-list__size">565*528</div>
+                    <div class="image-list__date">2021.12.11</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <div class="image-list__img">
+                    <img src="./img/image_sample01.jpg" alt="연말등 날리기 이미지">
+                    <div class="image-list__img__mask"><span>추가</span></div>
+                  </div>
+                  <div class="image-list__text">
+                    <h3 class="image-list__title">연말등 날리기 이미지</h3>
+                    <div class="image-list__type">Standard Media Top</div>
+                    <div class="image-list__size">565*528</div>
+                    <div class="image-list__date">2021.12.20</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <h1 class="RCS-wrap_tit">RCS</h1>
+      <ul class="top-menu">
+        <li class="animated-button--active">
+          <a href="javascript:;"><i class="ico_sms"></i><span>SMS/LMS</span></a>
+        </li>
+        <li class="animated-button">
+          <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+        </li>
+        <li class="animated-button">
+          <a href="javascript:;"><i class="ico_temp"></i><span>템플릿</span></a>
+        </li>
+      </ul>
+      <ul class="bottom-menu">
+        <li class="animated-button">
+          <a href="javascript:;"><i class="ico_lookup"></i><span>예약조회</span></a>
+        </li>
+        <li class="animated-button">
+          <a href="javascript:;"><i class="ico_result"></i><span>발송결과</span></a>
+        </li>
+      </ul>
+    </nav>
+    <section class="cont_wrap"></section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCS</title>
+    <!-- fontstyle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="RCS-wrap">
+      <a
+        style="position: absolute; top: 10px; left: 10px"
+        class="modal-wrap__btn--yes"
+        href="#open-modal"
+        >모달 예시</a
+      >
+
+      <div id="open-modal" class="modal-window modal-center">
+        <div class="modal-center__inner">
+          <a href="#" title="Close" class="modal-close"
+            ><i class="ico_close"></i
+          ></a>
+          <h2>메세지 내 버튼 설정</h2>
+          <div class="modal-center__cont-wrap scroll-custom">
+            <div class="message-button__wrap message-button-type03">
+              <button class="message-button__wrap__close"></button>
+              <div class="message-button-type03__label">
+                <div class="label-select">
+                  <label>버튼유형</label>
+                  <select class="label" disabled>
+                    <option value="">URL 연결</option>
+                    <option value="">option01</option>
+                    <option value="">option02</option>
+                  </select>
+                </div>
+                <div class="label-input">
+                  <label>버튼명</label>
+                  <input type="text" placeholder="입력" disabled />
+                </div>
+              </div>
+              <div class="label-input label-input__w100">
+                <label>URL 입력</label>
+                <input type="text" placeholder="URL://" disabled />
+              </div>
+            </div>
+            <div class="message-button__wrap message-button-type03">
+              <button class="message-button__wrap__close"></button>
+              <div class="message-button-type03__label">
+                <div class="label-select">
+                  <label>버튼유형</label>
+                  <select class="label" disabled>
+                    <option value="">URL 연결</option>
+                    <option value="">option01</option>
+                    <option value="">option02</option>
+                  </select>
+                </div>
+                <div class="label-input">
+                  <label>버튼명</label>
+                  <input type="text" placeholder="입력" disabled />
+                </div>
+              </div>
+              <div class="label-input label-input__w100">
+                <label>URL 입력</label>
+                <input type="text" placeholder="URL://" disabled />
+              </div>
+            </div>
+            <div class="message-button__wrap message-button-type03">
+              <button class="message-button__wrap__close"></button>
+              <div class="message-button-type03__label">
+                <div class="label-select">
+                  <label>버튼유형</label>
+                  <select class="label" disabled>
+                    <option value="">URL 연결</option>
+                    <option value="">option01</option>
+                    <option value="">option02</option>
+                  </select>
+                </div>
+                <div class="label-input">
+                  <label>버튼명</label>
+                  <input type="text" placeholder="입력" disabled />
+                </div>
+              </div>
+              <div class="label-input label-input__w100">
+                <label>URL 입력</label>
+                <input type="text" placeholder="URL://" disabled />
+              </div>
+            </div>
+            <div class="message-button__wrap message-button-type03">
+              <button class="message-button__wrap__close"></button>
+              <div class="message-button-type03__label">
+                <div class="label-select">
+                  <label>버튼유형</label>
+                  <select class="label" disabled>
+                    <option value="">전화걸기</option>
+                    <option value="">option01</option>
+                    <option value="">option02</option>
+                  </select>
+                </div>
+                <div class="label-input">
+                  <label>버튼명</label>
+                  <input type="text" placeholder="입력" disabled />
+                </div>
+              </div>
+              <div class="label-input label-input__w100 phone-number">
+                <label>전화번호 입력</label>
+                <input type="text" placeholder="080-0000-0000" disabled />
+              </div>
+            </div>
+            
+          </div>
+          <div class="variable-add">
+            <h3>변수값 변경</h3>
+            <div class="variable-add__title">
+              <i class="variable-add__arrow"></i>
+              <span class="variable-add__show">저장된 변수값 확인</span>
+              <span class="variable-add__hidden">저장된 변수값 닫기</span>
+            </div>
+            <div class="customer-setting scroll-custom">
+              <ul class="customer-setting__button-list clearFix">
+                <li>
+                  <select class="variable-select">
+                    <option value="">고객명</option>
+                    <option value="">Option1</option>
+                    <option value="">Option2</option>
+                  </select>
+                </li>
+                <li>
+                  <!--📌 DEV Check(22) : 선택된 변수값은 class="variable-select--active" 추가 -->
+                  <select class="variable-select variable-select--active">
+                    <option value="">고객 아이디</option>
+                    <option value="">Option1</option>
+                    <option value="">Option2</option>
+                  </select>
+                </li>
+                <li>
+                  <select class="variable-select">
+                    <option value="">고객 휴대폰</option>
+                    <option value="">Option1</option>
+                    <option value="">Option2</option>
+                  </select>
+                </li>
+                <li>
+                  <select class="variable-select">
+                    <option value="">고객 이메일</option>
+                    <option value="">Option1</option>
+                    <option value="">Option2</option>
+                  </select>
+                </li>
+                <li>
+                  <select class="variable-select">
+                    <option value="">고객 이메일</option>
+                    <option value="">Option1</option>
+                    <option value="">Option2</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+            <div class="variable__button">
+              <button class="variable__btn--delete">취소</button>
+              <button class="variable__btn--ok">등록</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <h1 class="RCS-wrap_tit">RCS</h1>
+        <ul class="top-menu">
+          <li class="animated-button--active">
+            <a href="javascript:;"
+              ><i class="ico_sms"></i><span>SMS/LMS</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_temp"></i><span>템플릿</span></a
+            >
+          </li>
+        </ul>
+        <ul class="bottom-menu">
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_lookup"></i><span>예약조회</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_result"></i><span>발송결과</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="cont_wrap"></section>
+    </div>
+  </body>
+</html>

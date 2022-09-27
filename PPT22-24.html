@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCS</title>
+    <!-- fontstyle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="RCS-wrap">
+      <a
+        style="position: absolute; top: 10px; left: 10px"
+        class="modal-wrap__btn--yes"
+        href="#open-modal"
+        >모달 예시</a
+      >
+
+      <div id="open-modal" class="modal-window modal-center">
+        <div class="modal-center__inner">
+          <a href="#" title="Close" class="modal-close"
+            ><i class="ico_close"></i
+          ></a>
+          <h2>대체발송 설정</h2>
+          <div class="modal-center__cont-wrap">
+            <div class="tab tab-sticky clearFix">
+              <ul>
+                <li class="tab-active" rel="tab1">
+                  <a href="javascript:;">SMS/LMS</a>
+                </li>
+                <li rel="tab2">
+                  <a href="javascript:;">MMS</a>
+                </li>
+                <li rel="tab3">
+                  <a href="javascript:;">친구톡</a>
+                </li>
+                <li rel="tab4">
+                  <a href="javascript:;">알림톡</a>
+                </li>
+              </ul>
+              <div class="tab-cont-wrap scroll-custom">
+                <div id="tab1" class="tab-cont tab-cont__sms">
+                  <div class="message-setting mt0">
+                    <h3>메세지 설정</h3>
+                    <div class="message-setting__inner">
+                      <input
+                        type="text"
+                        placeholder="메세지 제목 (LMS용, 최대30자)"
+                        disabled
+                      />
+                      <div class="message-setting__textarea">
+                        <textarea
+                          placeholder="100자 초과시 자동으로 LMS로 전환됩니다."
+                        ></textarea>
+                        <div class="message-setting__textarea-txt">
+                          <span class="message-setting__textarea-txt--blue"
+                            >SMS</span
+                          >
+                          <span class="message-setting__textarea-txt--bk">
+                            <span
+                              class="message-setting__textarea-txt--bk--bold"
+                              >100</span
+                            >/100자
+                          </span>
+                        </div>
+                      </div>
+                      <div class="message-setting__button clearFix">
+                        <div class="message-setting__left">
+                          <button class="btn reset">내용 초기화</button>
+                        </div>
+                        <div class="message-setting__right clearFix">
+                          <button class="btn message">메세지 불러오기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="customer-setting">
+                    <h6 class="customer-setting__tit">고객 설정</h6>
+                    <ul class="customer-setting__button-list clearFix">
+                      <li>
+                        <!--📌 DEV Check(1) : button 선택 시 class=".customer-setting__button--active" 추가 -->
+                        <button
+                          class="customer-setting__button customer-setting__button--active"
+                        >
+                          #{통합고객번호}<i></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="customer-setting__button">
+                          #{세그먼트사용법일련번호}<i></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="customer-setting__button">
+                          #{사번}<i></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="customer-setting__button">
+                          #{고객휴대폰}<i></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="customer-setting__button">
+                          #{고객이메일}<i></i>
+                        </button>
+                      </li>
+                      <li>
+                        <button class="customer-setting__button">
+                          #{고객명}<i></i>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="label-wrap label-wrap__replace clearFix">
+                    <div class="label-select">
+                      <label>발신번호</label>
+                      <select class="label" name="">
+                        <option value="">선택</option>
+                        <option value="">option01</option>
+                        <option value="">option02</option>
+                      </select>
+                    </div>
+                    <div class="label-select">
+                      <label>수신거부번호</label>
+                      <select class="label" name="">
+                        <option value="">선택</option>
+                        <option value="">option01</option>
+                        <option value="">option02</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="message-save-form__button">
+                    <button class="message-save-form__btn--delete">취소</button>
+                    <button class="message-save-form__btn--ok">등록</button>
+                  </div>
+                </div>
+                <div id="tab2" class="tab-cont tab-cont__mms">
+                  <div class="message-setting mt0">
+                    <h3>메세지 설정</h3>
+                    <div class="message-setting__inner">
+                      <input type="text" placeholder="메세지 제목 (최대30자)" />
+                      <div class="file-wrap">
+                        <span class="file-name">권장사이즈 (240x224)</span>
+                        <span class="file-btn">
+                          <input
+                            class="file-btn__input"
+                            id="agentFile02"
+                            type="file"
+                            multiple
+                            accept="image/*"
+                          />
+                          <label
+                            tabindex="0"
+                            for="agentFile02"
+                            class="file-btn__label btn plus"
+                            >이미지추가</label
+                          >
+                        </span>
+                        <a
+                          href="javascript:;"
+                          class="file-btn__delete btn delete"
+                          >삭제</a
+                        >
+                      </div>
+                      <div class="message-setting__textarea">
+                        <textarea
+                          placeholder="100자 초과시 자동으로 LMS로 전환됩니다."
+                        ></textarea>
+                        <div class="message-setting__textarea-txt">
+                          <span class="message-setting__textarea-txt--blue"
+                            >MMS</span
+                          >
+                          <span class="message-setting__textarea-txt--bk">
+                            <span
+                              class="message-setting__textarea-txt--bk--bold"
+                              >100</span
+                            >/100자
+                          </span>
+                        </div>
+                      </div>
+                      <div class="message-setting__button clearFix">
+                        <div class="message-setting__left">
+                          <button class="btn reset">내용 초기화</button>
+                        </div>
+                        <div class="message-setting__right clearFix">
+                          <button class="btn message">메세지 불러오기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="customer-setting">
+                      <h6 class="customer-setting__tit">고객 설정</h6>
+                      <ul class="customer-setting__button-list clearFix">
+                        <li>
+                          <!--📌 DEV Check(1) : button 선택 시 class=".customer-setting__button--active" 추가 -->
+                          <button
+                            class="customer-setting__button customer-setting__button--active"
+                          >
+                            #{통합고객번호}<i></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="customer-setting__button">
+                            #{세그먼트사용법일련번호}<i></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="customer-setting__button">
+                            #{사번}<i></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="customer-setting__button">
+                            #{고객휴대폰}<i></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="customer-setting__button">
+                            #{고객이메일}<i></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="customer-setting__button">
+                            #{고객명}<i></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="label-wrap label-wrap__replace clearFix">
+                      <div class="label-select">
+                        <label>발신번호</label>
+                        <select class="label" name="">
+                          <option value="">선택</option>
+                          <option value="">option01</option>
+                          <option value="">option02</option>
+                        </select>
+                      </div>
+                      <div class="label-select">
+                        <label>수신거부번호</label>
+                        <select class="label" name="">
+                          <option value="">선택</option>
+                          <option value="">option01</option>
+                          <option value="">option02</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="message-save-form__button">
+                      <button class="message-save-form__btn--delete">
+                        취소
+                      </button>
+                      <button class="message-save-form__btn--ok">등록</button>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab3" class="tab-cont tab-cont__friend-talk">
+                  <div class="friend-talk__template">
+                    <div class="friend-talk__template__btn">
+                      <button class="btn template">템플릿 불러오기</button>
+                      <div
+                        class="message-setting__toggle toggle-button toggle-button--mt25 clearFix"
+                      >
+                        <span
+                          class="message-setting__toggle-tit toggle-button__title"
+                          >광고성 여부</span
+                        >
+                        <div
+                          class="message-setting__toggle-wrap toggle-button__wrap toggle-button__wrap--style01"
+                        >
+                          <input type="checkbox" checked />
+                          <div
+                            class="message-setting__toggle-circle toggle-button__circle"
+                          ></div>
+                          <div
+                            class="message-setting__toggle-bar toggle-button__bar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="message-setting__textarea">
+                      <textarea
+                        placeholder="100자 초과시 자동으로 LMS로 전환됩니다."
+                        disabled
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="night-send friend-talk__night-send">
+                    <h3>야간발송</h3>
+                    <div class="night-send__info">
+                      <img
+                        src="./img/nightMessage.png"
+                        alt="* 야간시간의 광고성 정보전송은 별도의 동의가 필요합니다."
+                      />
+                    </div>
+                    <div class="replace-send__group clearFix">
+                      <!--📌 DEV Check(4) : checkbox checked 됐을 때 label class="replace-send__control--active" 추가 -->
+                      <label
+                        class="replace-send__control replace-send__control--active"
+                        >발송안함
+                        <input type="checkbox" checked />
+                        <div class="replace-send__control__indicator"></div>
+                      </label>
+                      <label class="replace-send__control"
+                        >발송함
+                        <input type="checkbox" />
+                        <div class="replace-send__control__indicator"></div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="button-info">
+                    <h3>버튼정보</h3>
+                    <div class="button-info__inner">
+                      <div class="label-wrap clearFix">
+                        <div class="label-input">
+                          <label>버튼타입</label>
+                          <input type="text" value="웹링크" disabled />
+                        </div>
+                        <div class="label-input">
+                          <label>버튼이름</label>
+                          <input type="text" value="바로가기" disabled />
+                        </div>
+                      </div>
+                      <div class="label-wrap clearFix">
+                        <div class="label-input">
+                          <label>MO 버튼링크</label>
+                          <input type="text" value="http://" disabled />
+                        </div>
+                        <div class="label-input">
+                          <label>PC 버튼링크</label>
+                          <input type="text" value="http://" disabled />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-info__inner button-info__inner-bot">
+                      <div class="label-wrap label-one clearFix">
+                        <div class="label-input">
+                          <label>프로파일 Key</label>
+                          <input type="text" value="@아이투맥스" disabled />
+                        </div>
+                      </div>
+                      <div class="label-wrap clearFix">
+                        <div class="label-input">
+                          <label>이미지 경로</label>
+                          <input type="text" value="http://" disabled />
+                        </div>
+                        <div class="label-input">
+                          <label>이미지 링크 URL</label>
+                          <input type="text" value="http://" disabled />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="friend-talk__customer-setting">
+                    <h3>고객 설정</h3>
+                    <div class="cont-info">
+                      템플릿에 등록되어 있는 변수를 변경할 수 있습니다.
+                    </div>
+                    <div class="label-wrap clearFix">
+                      <div class="label-select">
+                        <label>발신번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                      <div class="label-select">
+                        <label>수신거부번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="label-wrap clearFix">
+                      <div class="label-select">
+                        <label>발신번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                      <div class="label-select">
+                        <label>수신거부번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="label-wrap clearFix">
+                      <div class="label-select">
+                        <label>발신번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                      <div class="label-select">
+                        <label>수신거부번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message-save-form__button">
+                    <button class="message-save-form__btn--delete">취소</button>
+                    <button class="message-save-form__btn--ok">등록</button>
+                  </div>
+                </div>
+                <div id="tab4" class="tab-cont tab-cont__noti-talk">
+                  <div class="friend-talk__template">
+                    <div class="friend-talk__template__btn">
+                      <button class="btn template">템플릿 불러오기</button>
+                      <div
+                        class="message-setting__toggle toggle-button toggle-button--mt25 clearFix"
+                      >
+                        <span
+                          class="message-setting__toggle-tit toggle-button__title"
+                          >광고성 여부</span
+                        >
+                        <div
+                          class="message-setting__toggle-wrap toggle-button__wrap toggle-button__wrap--style01"
+                        >
+                          <input type="checkbox" checked />
+                          <div
+                            class="message-setting__toggle-circle toggle-button__circle"
+                          ></div>
+                          <div
+                            class="message-setting__toggle-bar toggle-button__bar"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="message-setting__textarea">
+                      <textarea
+                        placeholder="100자 초과시 자동으로 LMS로 전환됩니다."
+                        disabled
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="button-info">
+                    <h3>버튼정보</h3>
+                    <div class="button-info__inner">
+                      <div class="label-wrap clearFix">
+                        <div class="label-input">
+                          <label>버튼타입</label>
+                          <input type="text" value="웹링크" disabled />
+                        </div>
+                        <div class="label-input">
+                          <label>버튼이름</label>
+                          <input type="text" value="바로가기" disabled />
+                        </div>
+                      </div>
+                      <div class="label-wrap clearFix">
+                        <div class="label-input">
+                          <label>MO 버튼링크</label>
+                          <input type="text" value="http://" disabled />
+                        </div>
+                        <div class="label-input">
+                          <label>PC 버튼링크</label>
+                          <input type="text" value="http://" disabled />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-info__inner button-info__inner-bot">
+                      <div class="label-wrap label-one clearFix">
+                        <div class="label-input">
+                          <label>프로파일 Key</label>
+                          <input type="text" value="@아이투맥스" disabled />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="friend-talk__customer-setting">
+                    <h3>고객 설정</h3>
+                    <div class="cont-info">
+                      템플릿에 등록되어 있는 변수를 변경할 수 있습니다.
+                    </div>
+                    <div class="label-wrap clearFix">
+                      <div class="label-select">
+                        <label>발신번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                      <div class="label-select">
+                        <label>수신거부번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="label-wrap clearFix">
+                      <div class="label-select">
+                        <label>발신번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                      <div class="label-select">
+                        <label>수신거부번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="label-wrap clearFix">
+                      <div class="label-select">
+                        <label>발신번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                      <div class="label-select">
+                        <label>수신거부번호</label>
+                        <select>
+                          <option selected>선택</option>
+                          <option>option 01</option>
+                          <option>option 02</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="message-save-form__button">
+                    <button class="message-save-form__btn--delete">취소</button>
+                    <button class="message-save-form__btn--ok">등록</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <h1 class="RCS-wrap_tit">RCS</h1>
+        <ul class="top-menu">
+          <li class="animated-button--active">
+            <a href="javascript:;"
+              ><i class="ico_sms"></i><span>SMS/LMS</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_temp"></i><span>템플릿</span></a
+            >
+          </li>
+        </ul>
+        <ul class="bottom-menu">
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_lookup"></i><span>예약조회</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_result"></i><span>발송결과</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="cont_wrap"></section>
+    </div>
+  </body>
+</html>

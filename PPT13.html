@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCS</title>
+    <!-- fontstyle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="RCS-wrap">
+      <nav>
+        <h1 class="RCS-wrap_tit">RCS</h1>
+        <ul class="top-menu">
+          <li class="animated-button--active">
+            <a href="javascript:;"><i class="ico_sms"></i><span>SMS/LMS</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_temp"></i><span>템플릿</span></a>
+          </li>
+        </ul>
+        <ul class="bottom-menu">
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_lookup"></i><span>예약조회</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_result"></i><span>발송결과</span></a>
+          </li>
+        </ul>
+      </nav>
+      <section class="cont_wrap">
+        <article class="scroll-custom">
+          <h2>MMS</h2>
+          <div class="label-wrap clearFix">
+            <div class="label-select">
+              <label>브랜드</label>
+              <select class="label" name="">
+                <option value="">선택</option>
+                <option value="">option01</option>
+                <option value="">option02</option>
+              </select>
+            </div>
+            <div class="label-select mr0">
+              <label>발신번호</label>
+              <select class="label" name="">
+                <option value="">02-5421-1333</option>
+                <option value="">option01</option>
+                <option value="">option02</option>
+              </select>
+            </div>
+          </div>
+          <div class="message-setting">
+            <h3>메세지 설정</h3>
+            <div class="message-setting__toggle toggle-button toggle-button--mt25 clearFix">
+              <span class="message-setting__toggle-tit toggle-button__title">광고성 여부</span>
+              <div class="message-setting__toggle-wrap toggle-button__wrap toggle-button__wrap--style01">
+                <input type="checkbox" />
+                <div class="message-setting__toggle-circle toggle-button__circle"></div>
+                <div class="message-setting__toggle-bar toggle-button__bar"></div>
+              </div>
+            </div>
+            <div class="photo-type">
+              <h6>포토 유형</h6>
+              <div class="social-icons photo-type__question">
+                <a class="social-icon photo-type__question-icon">
+                  <div class="photo-type__tooltip">
+                    <div class="photo-type__tooltip__left">
+                      <h3>포토유형 선택가능</h3>
+                      <ul>
+                        <li>세로<span>M/T</span></li>
+                        <li>가로(좌측)<span>M/T</span></li>
+                        <li>가로(우측)<span>M/T</span></li>
+                      </ul>
+                    </div>
+                    <div class="photo-type__tooltip__right">
+                      <h4>슬라이드</h4>
+                      <div class="photo-type__tooltip__right-list">
+                        <ul>
+                          <li>Short X3</li>
+                          <li>Short X4</li>
+                          <li>Short X5</li>
+                          <li>Short X6</li>
+                        </ul>
+                        <ul>
+                          <li>Medium X3</li>
+                          <li>Medium X4</li>
+                          <li>Medium X5</li>
+                          <li>Medium X6</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <ul class="photo-type__list clearFix">
+                <!--📌 DEV Check(6) : selected 됐을 때, 부모 li에 class="photo-type__list--active" 추가 -->
+
+                <li class="photo-type__list01 photo-type__list--active">
+                  <select>
+                    <option class="selected" selected>세로 선택</option>
+                    <option value="">세로 Medium</option>
+                    <option value="">세로 Tall</option>
+                  </select>
+                </li>
+                <li class="photo-type__list02">
+                  <select>
+                    <option class="selected" selected>가로(좌측) 선택</option>
+                    <option value="">가로(좌측) Medium</option>
+                    <option value="">가로(좌측) Tall</option>
+                  </select>
+                </li>
+                <li class="photo-type__list03">
+                  <select>
+                    <option class="selected" selected>가로(우측) 선택</option>
+                    <option value="">가로(우측) Medium</option>
+                    <option value="">가로(우측) Tall</option>
+                  </select>
+                </li>
+                <li class="photo-type__list04">
+                  <select>
+                    <option class="selected" selected>슬라이드 선택</option>
+                    <option value="">슬라이드 Short x3</option>
+                    <option value="">슬라이드 Short x4</option>
+                    <option value="">슬라이드 Short x5</option>
+                    <option value="">슬라이드 Short x6</option>
+                    <option value="">슬라이드 Medium x3</option>
+                    <option value="">슬라이드 Medium x4</option>
+                    <option value="">슬라이드 Medium x5</option>
+                    <option value="">슬라이드 Medium x6</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="message-setting__inner">
+            <input type="text" placeholder="메세지 제목 (최대30자)" />
+            <div class="photo-slide">
+              <div class="photo-slide__top">
+                <h6 class="photo-slide__tit">슬라이드</h6>
+                <div class="photo-slide__number"><span class="photo-slide__number--active">01</span> / 03</div>
+              </div>
+              <div class="slide-tab photo-slide__bot clearFix">
+                <ul class="photo-slide__pagination clearFix">
+                  <li class="slide-tab--active" rel="slide-tab1">1</li>
+                  <li rel="slide-tab2">2</li>
+                  <li rel="slide-tab3">3</li>
+                </ul>
+                <div class="slide-tab-cont-wrap">
+                  <div id="slide-tab1" class="slide-tab-cont">
+                    <div class="file-wrap">
+                      <span class="file-name">권장사이즈 (240x224)</span>
+                      <span class="file-btn">
+                        <input class="file-btn__input" id="agentFile02" type="file" multiple accept="image/*" />
+                        <label tabindex="0" for="agentFile02" class="file-btn__label btn plus">이미지추가</label>
+                      </span>
+                      <a href="javascript:;" class="file-btn__delete btn delete">삭제</a>
+                    </div>
+                    <div class="message-setting__textarea">
+                      <textarea placeholder="메세지를 입력해주세요."></textarea>
+                      <div class="message-setting__textarea-txt">
+                        <span class="message-setting__textarea-txt--blue">MMS</span>
+                        <span class="message-setting__textarea-txt--bk"> <span class="message-setting__textarea-txt--bk--bold">1300</span>/1300자 </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="slide-tab2" class="slide-tab-cont">
+                    <div class="file-wrap">
+                      <span class="file-name">권장사이즈 (240x224)</span>
+                      <span class="file-btn">
+                        <input class="file-btn__input" id="agentFile02" type="file" multiple accept="image/*" />
+                        <label tabindex="0" for="agentFile02" class="file-btn__label btn plus">이미지추가</label>
+                      </span>
+                      <a href="javascript:;" class="file-btn__delete btn delete">삭제</a>
+                    </div>
+                    <div class="message-setting__textarea">
+                      <textarea placeholder="메세지를 입력해주세요."></textarea>
+                      <div class="message-setting__textarea-txt">
+                        <span class="message-setting__textarea-txt--blue">MMS</span>
+                        <span class="message-setting__textarea-txt--bk"> <span class="message-setting__textarea-txt--bk--bold">1300</span>/1300자 </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="slide-tab3" class="slide-tab-cont">
+                    <div class="file-wrap">
+                      <span class="file-name">권장사이즈 (240x224)</span>
+                      <span class="file-btn">
+                        <input class="file-btn__input" id="agentFile02" type="file" multiple accept="image/*" />
+                        <label tabindex="0" for="agentFile02" class="file-btn__label btn plus">이미지추가</label>
+                      </span>
+                      <a href="javascript:;" class="file-btn__delete btn delete">삭제</a>
+                    </div>
+                    <div class="message-setting__textarea">
+                      <textarea placeholder="메세지를 입력해주세요."></textarea>
+                      <div class="message-setting__textarea-txt">
+                        <span class="message-setting__textarea-txt--blue">MMS</span>
+                        <span class="message-setting__textarea-txt--bk"> <span class="message-setting__textarea-txt--bk--bold">1300</span>/1300자 </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="message-setting__button clearFix">
+              <div class="message-setting__left">
+                <button class="btn reset">내용 초기화</button>
+              </div>
+              <div class="message-setting__right clearFix">
+                <button class="btn template">템플릿 불러오기</button>
+                <button class="btn setup">버튼설정</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="customer-setting">
+            <h6 class="customer-setting__tit">고객 설정</h6>
+            <ul class="customer-setting__button-list clearFix">
+              <li>
+                <!--📌 DEV Check(1) : button 선택 시 class=".customer-setting__button--active" 추가 -->
+                <button class="customer-setting__button customer-setting__button--active">#{통합고객번호}<i></i></button>
+              </li>
+              <li>
+                <button class="customer-setting__button">#{세그먼트사용법일련번호}<i></i></button>
+              </li>
+              <li>
+                <button class="customer-setting__button">#{사번}<i></i></button>
+              </li>
+              <li>
+                <button class="customer-setting__button">#{고객휴대폰}<i></i></button>
+              </li>
+              <li>
+                <button class="customer-setting__button">#{고객이메일}<i></i></button>
+              </li>
+              <li>
+                <button class="customer-setting__button">#{고객명}<i></i></button>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <aside>
+          <div class="tab clearFix">
+            <ul>
+              <!--📌 DEV Check(3) : 해당 탭화면 보여질 때 class="tab-active" 추가 -->
+              <li class="tab-active" rel="tab1">
+                <a href="javascript:;">미리보기</a>
+              </li>
+              <li rel="tab2">
+                <a href="javascript:;">대체발송</a>
+              </li>
+            </ul>
+            <div class="tab-cont-wrap">
+              <div id="tab1" class="tab-cont preview-wrap">
+                <div class="preview-inner mockup-scroll">
+                  <!--📌 DEV Check(12) : 포토 유형 미리보기 - 기본 -->
+                  <!--
+                <div class="preview-message">
+                <div class="preview-message__inner-text">
+                <div class="preview-message__inner-tit">
+                  주문이 완료 되었습니다.
+                </div>
+                <div class="preview-message__inner-cont">
+                  - 상품명: 다이아코팅 알루미늄 양수 냄비 20cm<br />
+                  - 주문번호: 2019-09-24-F44675<br />
+                  - 결제금액: 32,300원(카드)<br />
+                  - 더블 후기 적립금<br /><br />
+                  ※ 반품 기준은 당사 약관/홈페이지 내<br />
+                  상품 정보 고지 내용에 따르며 가전/가구,<br />
+                  설치상품은 사용 후 반품이 불가하므로<br />
+                  이 점 유의하시기 바랍니다.
+                </div>
+                </div>
+                <div class="preview-message__button">
+                <button>주문 조회/변경하기</button>
+                <button>반품기준 확인하기</button>
+                <button>상품문의</button>
+                </div>
+              </div>
+              -->
+
+                  <!--📌 DEV Check(13) : 포토 유형 미리보기 - 가로(왼쪽) -->
+                  <!--
+                <div class="preview-message preview-message__row-left">
+                  <div class="preview-message__inner-img">
+                    <img src="./img/sample.jpg" alt="샘플이미지" />
+                  </div>
+                  <div class="preview-message__inner-text-wrap">
+                    <div class="preview-message__inner-text">
+                    <div class="preview-message__inner-tit">
+                      5G혜택<br>
+                      최대 5만원 쏜다~!
+                    </div>
+                    <div class="preview-message__inner-cont">
+                      5G슈퍼 플래티넘<br>
+                      요금제 출시 기념,<br>
+                      5가 들어간 날마다<br>
+                      만원씩 쏩니다!
+                    </div>
+                    </div>
+                    <div class="preview-message__button">
+                    <button>U+멤버스 앱</button>
+                    </div>
+                  </div>
+                </div>
+                -->
+
+                  <!--📌 DEV Check(14) : 포토 유형 미리보기 - 가로(오른쪽) -->
+                  <!--
+                <div class="preview-message preview-message__row-right">
+                  <div class="preview-message__inner-text-wrap">
+                    <div class="preview-message__inner-text">
+                    <div class="preview-message__inner-tit">
+                      5G혜택<br>
+                      최대 5만원 쏜다~!
+                    </div>
+                    <div class="preview-message__inner-cont">
+                      5G슈퍼 플래티넘<br>
+                      요금제 출시 기념,<br>
+                      5가 들어간 날마다<br>
+                      만원씩 쏩니다!
+                    </div>
+                    </div>
+                    <div class="preview-message__button">
+                    <button>U+멤버스 앱</button>
+                    </div>
+                  </div>
+                  <div class="preview-message__inner-img">
+                    <img src="./img/sample.jpg" alt="샘플이미지" />
+                  </div>
+                </div>
+                -->
+
+                  <!--📌 DEV Check(15) : 포토 유형 미리보기 - 슬라이드 -->
+                  <div class="preview-message swiper preview-message__swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./img/Carousel_01.jpg" alt="지니" />
+                        <div class="swiper-slide__message">
+                          <div class="preview-message__inner-tit">이용권 구매</div>
+                          <div class="preview-message__inner-cont">
+                            지니 BEST 이용권<br />
+                            KT 멤버십 차감 할인 6개월간 30%<br />
+                            10,800원
+                          </div>
+                          <div class="preview-message__button">
+                            <button>구매하기</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/Carousel_02.jpg" alt="이용권 구매" />
+                        <div class="swiper-slide__message">
+                          <div class="preview-message__inner-tit">이용권 구매</div>
+                          <div class="preview-message__inner-cont">
+                            지니 BEST 이용권<br />
+                            KT 멤버십 차감 할인 6개월간 30%<br />
+                            10,800원
+                          </div>
+                          <div class="preview-message__button">
+                            <button>구매하기</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./img/Carousel_03.jpg" alt="이용권 구매" />
+                        <div class="swiper-slide__message">
+                          <div class="preview-message__inner-tit">이용권 구매</div>
+                          <div class="preview-message__inner-cont">
+                            지니 BEST 이용권<br />
+                            KT 멤버십 차감 할인 6개월간 30%<br />
+                            10,800원
+                          </div>
+                          <div class="preview-message__button">
+                            <button>구매하기</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab2" class="tab-cont preview-wrap replace-wrap">
+                <div class="preview-inner mockup-scroll">
+                  <div class="preview-message">
+                    <div class="preview-message__inner-text">
+                      <div class="preview-message__inner-cont">
+                        L.CLUB 첫구매이벤트<br /><br />
+                        5만원 이상 첫 구매 후 응모시<br />
+                        L.POINT 3천P 지급합니다.
+                      </div>
+                    </div>
+                    <div class="preview-message__button">
+                      <button>응모하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </body>
+</html>

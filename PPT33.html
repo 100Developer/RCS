@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCS</title>
+    <!-- fontstyle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div class="RCS-wrap">
+      <nav>
+        <h1 class="RCS-wrap_tit">RCS</h1>
+        <ul class="top-menu">
+          <li class="animated-button--active">
+            <a href="javascript:;"
+              ><i class="ico_sms"></i><span>SMS/LMS</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"><i class="ico_mms"></i><span>MMS</span></a>
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_temp"></i><span>템플릿</span></a
+            >
+          </li>
+        </ul>
+        <ul class="bottom-menu">
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_lookup"></i><span>예약조회</span></a
+            >
+          </li>
+          <li class="animated-button">
+            <a href="javascript:;"
+              ><i class="ico_result"></i><span>발송결과</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="cont_wrap">
+        <article class="scroll-custom scroll-custom--w100">
+          <h2>예약조회</h2>
+          <div class="reserve-total">총 <span>0개</span></div>
+          <div class="table-wrap">
+            <!--📌 DEV Check(8) : 예약 내역이 없을 경우 class="reserve-history__none" 추가 -->
+            <table class="table__style01 reserve-history__none">
+              <thead>
+                <tr>
+                  <th>저니명</th>
+                  <th>버전</th>
+                  <th>액티비티명</th>
+                  <th>구분</th>
+                  <th>타겟수</th>
+                  <th>예약일시</th>
+                  <th>상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="7">
+                    <div class="reserve-history__none__txt">
+                      <span>예약 내역이 없습니다.</span>
+                    </div>
+                    <img
+                      src="./img/IC_noMsg.png"
+                      class="reserve-history__none__icon"
+                      alt="예약 내역이 없습니다."
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!--📌 DEV Check(11) : table 내역이 없을 경우 div class="table-pagination--disable" 추가 -->
+          <div class="table-pagination table-pagination--disable">
+            <ul>
+              <li class="table-pagination__first">
+                <a href="javascript:;"></a>
+              </li>
+              <li class="table-pagination__prev">
+                <a href="javascript:;"></a>
+              </li>
+              <li>
+                <a href="javascript:;">01</a>
+              </li>
+              <li>
+                <a href="javascript:;">02</a>
+              </li>
+              <li>
+                <a href="javascript:;">03</a>
+              </li>
+              <li>
+                <a href="javascript:;">04</a>
+              </li>
+              <li>
+                <a href="javascript:;">05</a>
+              </li>
+              <li class="table-pagination__next">
+                <a href="javascript:;"></a>
+              </li>
+              <li class="table-pagination__last">
+                <a href="javascript:;"></a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
